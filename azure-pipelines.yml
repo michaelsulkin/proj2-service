@@ -23,7 +23,7 @@ steps:
 
 - task: AzureSpringCloud@0
   inputs:
-    azureSubscription: 'scProj2'
+    azureSubscription: 'michaelsulkin'
     Action: 'Deploy'
     AzureSpringCloud: 'sb-service'
     AppName: 'demo-1'
