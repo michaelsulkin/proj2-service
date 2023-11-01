@@ -6,6 +6,7 @@ public class PointOfInterest {
     private Integer pageid;
     private String title;
     private Coordinates coordinates;
+    public String description;
 
     public Coordinates getCoordinates() {
         return coordinates;
