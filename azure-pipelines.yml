@@ -39,4 +39,4 @@ steps:
     azureSubscription: 'scSpringApps'
     scriptType: pscore
     scriptLocation: inlineScript
-    inlineScript: az spring app deploy --name 'demo-1' --artifact-path ./target/demo-0.0.1-SNAPSHOT.jar --resource-group 'rg-TestProj-1'
+    inlineScript: az spring app deploy --name 'demo-1' --artifact-path ./target/demo-0.0.1-SNAPSHOT.jar --resource-group 'rg-TestProj-1' --service sb-service
