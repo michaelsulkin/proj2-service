@@ -21,13 +21,22 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 
-- task: AzureSpringCloud@0
+#- task: AzureSpringCloud@0
+#  inputs:
+#    azureSubscription: 'scSpringApps'
+#    Action: 'Deploy'
+#    AzureSpringCloud: 'sb-service'
+#    AppName: 'demo-1'
+#    DeploymentType: 'Artifacts'
+#    UseStagingDeployment: false
+#    DeploymentName: 'default'
+#    Package: ./target/demo-0.0.1-SNAPSHOT.jar
+
+- task: AzureCLI@2
+  displayName: 'Deploy demo-1'
+  name: 'deploy-demo-1'
   inputs:
     azureSubscription: 'scSpringApps'
-    Action: 'Deploy'
-    AzureSpringCloud: 'sb-service'
-    AppName: 'demo-1'
-    DeploymentType: 'Artifacts'
-    UseStagingDeployment: false
-    DeploymentName: 'default'
-    Package: ./target/demo-0.0.1-SNAPSHOT.jar
+    scriptType: ps
+    scriptLocation: inlineScript
+    inlineScript: az spring app deploy --name 'demo-1' --artifact-path ./target/demo-0.0.1-SNAPSHOT.jar
