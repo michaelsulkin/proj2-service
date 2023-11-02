@@ -34,7 +34,7 @@ steps:
 
 - task: AzureCLI@2
   displayName: 'Deploy demo-1'
-  name: 'deploy-demo-1'
+  name: 'deploy_demo_1'
   inputs:
     azureSubscription: 'scSpringApps'
     scriptType: ps
