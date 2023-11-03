@@ -26,7 +26,7 @@ public class GreetingController {
 		poi.getCoordinates().setLat(12.5);
 		poi.getCoordinates().setLon(-69.96666667);
 		poi.getCoordinates().setGlobe("earth");
-		poi.description = "Added description...";
+		poi.description = "Description of POI Aruba";
 		return poi;
 	}
 
