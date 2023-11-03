@@ -43,4 +43,14 @@ public class PointOfInterest {
     public int hashCode() {
         return Objects.hash(pageid, title, coordinates);
     }
+
+    @Override
+    public String toString() {
+        return "PointOfInterest{" +
+                "pageid=" + pageid +
+                ", title='" + title + '\'' +
+                ", coordinates=" + coordinates +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }
