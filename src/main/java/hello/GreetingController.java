@@ -12,7 +12,7 @@ public class GreetingController {
 	public @ResponseBody String greeting() {
 		return "Hello World";
 	}
-	@CrossOrigin(origins = "*")
+//	@CrossOrigin(origins = "*")
 	@RequestMapping(
 			value = "/poi/{id}",
 			method = RequestMethod.GET,
