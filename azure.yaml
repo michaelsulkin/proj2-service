@@ -8,3 +8,11 @@ services:
     project: ./complete/
     host: springapp
     language: java
+spring:
+  cloud:
+    azure:
+      active-directory:
+        enabled: true
+        credential:
+          client-id: ce4ab401-acb3-4937-87b7-14bb91604760
+        app-id-uri: api://ce4ab401-acb3-4937-87b7-14bb91604760
