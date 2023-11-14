@@ -33,10 +33,10 @@ steps:
 #    Package: ./target/demo-0.0.1-SNAPSHOT.jar
 
 - task: AzureCLI@2
-  displayName: 'Deploy demo-1'
+  displayName: 'Deploy demo-2'
   name: 'deploy_demo_1'
   inputs:
     azureSubscription: 'scSpringApps'
     scriptType: pscore
     scriptLocation: inlineScript
-    inlineScript: az spring app deploy --name 'demo-1' --artifact-path ./target/demo-0.0.1-SNAPSHOT.jar --resource-group 'rg-TestProj-1' --service sb-service
+    inlineScript: az spring app deploy --name 'demo-2' --artifact-path ./target/demo-0.0.1-SNAPSHOT.jar --resource-group 'rg-TestProj-1' --service sb-service
